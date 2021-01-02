@@ -6,8 +6,11 @@ name: Node.js CI
 on:
   push:
     branches: [ master ]
-  pull_request:
-    branches: [ master ]
+    paths: [ "packages/container/**" ]
+
+defaults:
+  run:
+    working-directory: packages/container
 
 jobs:
   build:
